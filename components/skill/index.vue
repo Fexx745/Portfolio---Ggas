@@ -3,13 +3,15 @@ import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 
 const ProgrammingLanguages = [
+    { name: "HTML", icon: "mdi-language-html5", color: "orange" },
+    { name: "CSS", icon: "mdi-language-css3", color: "blue" },
+
     { name: "JavaScript", icon: "mdi-language-javascript", color: "yellow" },
     { name: "TypeScript", icon: "mdi-language-typescript", color: "blue" },
     { name: "PHP", icon: "mdi-language-php", color: "purple" },
-    { name: "HTML", icon: "mdi-language-html5", color: "orange" },
-    { name: "CSS", icon: "mdi-language-css3", color: "blue" },
     { name: "Node.js", icon: "mdi-nodejs", color: "green" },
     { name: "SQL", icon: "mdi-database", color: "green" },
+    { name: "Dart", icon: "mdi-code-braces", color: "#0175C2" },
 ];
 
 const Tools = [
@@ -17,7 +19,7 @@ const Tools = [
     { name: "Postman", icon: "mdi-api", color: "orange" },
     { name: "GitHub Desktop", icon: "mdi-github", color: "black" },
     { name: "Figma", icon: "mdi-palette", color: "yellow" },
-    { name: "SQL Workbench", icon: "mdi-database", color: "blue" }
+    { name: "MySQL Workbench", icon: "mdi-database", color: "blue" }
 ];
 
 const Frameworks = [
@@ -44,8 +46,7 @@ const Frameworks = [
                     <v-divider></v-divider>
                     <v-card-text>
                         <v-row>
-                            <v-col v-for="language in ProgrammingLanguages" :key="language.name" cols="12" sm="6"
-                                md="4">
+                            <v-col v-for="language in ProgrammingLanguages" :key="language.name" cols="6" sm="6" md="4">
                                 <div :title="language.name" class="d-flex align-center mb-2 flex-column hover-effect"
                                     style="padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
                                     <v-icon :size="60" :color="language.color" class="mr-3">{{ language.icon }}</v-icon>
@@ -66,7 +67,7 @@ const Frameworks = [
                     <v-divider></v-divider>
                     <v-card-text>
                         <v-row>
-                            <v-col v-for="framework in Frameworks" :key="framework.name" cols="12" sm="6" md="4">
+                            <v-col v-for="framework in Frameworks" :key="framework.name" cols="6" sm="6" md="4">
                                 <div :title="framework.name" class="d-flex align-center mb-2 flex-column hover-effect"
                                     style="padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
                                     <v-icon :size="60" :color="framework.color" class="mr-3">{{ framework.icon
@@ -90,12 +91,11 @@ const Frameworks = [
                     <v-divider></v-divider>
                     <v-card-text>
                         <v-row>
-                            <v-col v-for="tool in Tools" :key="tool.name" cols="12" sm="6" md="4">
+                            <v-col v-for="tool in Tools" :key="tool.name" cols="6" sm="6" md="4">
                                 <div :title="tool.name" class="d-flex align-center mb-2 flex-column hover-effect"
                                     style="padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
-                                    <v-icon :size="50" :color="tool.color" class="mr-3">{{ tool.icon
-                                        }}</v-icon>
-                                    <span>{{ tool.name }}</span>
+                                    <v-icon :size="50" :color="tool.color" class="mr-3">{{ tool.icon }}</v-icon>
+                                    <span style="width: 130px">{{ tool.name }}</span>
                                 </div>
                             </v-col>
                         </v-row>

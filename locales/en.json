@@ -1,8 +1,21 @@
 {
     "project": {
-        "text": "Project",
+        "text": "Projects",
         "welcome": "Welcome to my portfolio!",
-        "des": "description"
+        "des": {
+            "title": "Project Details",
+            "e-com": {
+                "title": "E-commerce Website Development Project",
+                "role": "Graduation Project:",
+                "detail": "Development of an e-commerce website using PHP, MySQL, HTML, CSS, and JavaScript without using a framework, as I did not have knowledge of frameworks at that time. The website can handle user authentication, product management, shopping cart system, and order processing effectively."
+            },
+            "mytask": {
+                "title": "Internal Project Management System Development",
+                "role": "Internship Experience at Company:",
+                "detail": "Development of an internal project management system that helps improve collaboration by creating and tracking projects, assigning tasks, defining user roles, and updating information in real-time. Used Vue.js, Nuxt 3, Vuetify for Frontend and Node.js for Backend."
+            }
+        },
+        "exampleImg": "Project Example Image"
     },
     "about": {
         "text": "About Me",
