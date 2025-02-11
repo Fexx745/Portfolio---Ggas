@@ -3,31 +3,56 @@ import { useI18n } from "vue-i18n";
 import { ref, computed } from "vue";
 
 const { t } = useI18n();
-const drawer = ref(false); // ควบคุม Sidebar
+const drawer = ref(false);
+const fullText = "Portforlio";
+const displayText = ref('');
 
 const navbar_items = computed(() => [
-    { text: t('home.text'), href: "#home-page", icon: "mdi-home-outline" },
-    { text: t('about.text'), href: "#about-page", icon: "mdi-information-outline" },
+    { text: t('about.text'), href: "#about-page", icon: "mdi-home-outline" },
     { text: t('skill.text'), href: "#skill-page", icon: "mdi-star-outline" },
+    { text: t('project.text'), href: "#project-page", icon: "mdi-briefcase-outline" },
     { text: t('contact.text'), href: "#contact-page", icon: "mdi-email-outline" },
 ]);
+
+onMounted(() => {
+    let index = 0;
+    let deleting = false;
+
+    setInterval(() => {
+        if (!deleting) {
+            displayText.value = fullText.substring(0, index);
+            index++;
+            if (index > fullText.length) {
+                deleting = true;
+                index = fullText.length;
+            }
+        } else {
+            displayText.value = fullText.substring(0, index);
+            index--;
+            if (index === 0) {
+                deleting = false;
+            }
+        }
+    }, 100);
+});
+
 </script>
 
 <template>
-    <!-- App Bar (Fixed Navbar) -->
     <v-app-bar app fixed elevation="4" density="comfortable" class="custom-app-bar">
         <v-row align="center" style="width: 100%;" justify="space-between" class="px-8">
-
+            <!-- ขนาด lg -->
             <v-responsive class="d-flex align-center">
-                <strong class="text-h6 d-none d-md-inline d-sm-inline text-md-body-1 text-lg-h6">
-                    Nontachai's Portfolio
-                </strong>
-                <strong class="text-h6 d-inline d-md-none d-sm-none text-md-body-1 text-lg-h6">
-                    Portfolio
+                <div class="typing-container d-none d-md-flex">
+                    <span class="text kanit-black">{{ displayText }}</span>
+                    <span class="cursor">|</span>
+                </div>
+                <strong class="text-h6 d-inline d-md-none d-sm-none text-md-body-1 kanit-black">
+                    <span class="text kanit-black">{{ displayText }}</span>
                 </strong>
             </v-responsive>
 
-            <!-- Navbar สำหรับ Desktop -->
+            <!-- ขนาด md -->
             <div class="d-none d-md-flex">
                 <v-btn v-for="(item, index) in navbar_items" :key="index" :prepend-icon="item.icon" :to="item.href"
                     variant="plain" class="mx-2">
@@ -35,16 +60,16 @@ const navbar_items = computed(() => [
                 </v-btn>
             </div>
 
+            <!-- ขนาด มือถือ -->
             <div class="d-flex align-center">
                 <LayoutFullVerticalHeaderLanguageSwitcher />
                 <LayoutFullVerticalHeaderThemeSwitcher />
             </div>
-            <!-- Hamburger Menu (เฉพาะมือถือ) -->
             <v-app-bar-nav-icon class="d-md-none" @click="drawer = !drawer"></v-app-bar-nav-icon>
         </v-row>
     </v-app-bar>
 
-    <!-- Sidebar สำหรับมือถือ -->
+    <!-- slide ด้านข้าง -->
     <v-navigation-drawer v-model="drawer" app temporary>
         <v-list>
             <v-list-item v-for="(item, index) in navbar_items" :key="index" :to="item.href">
@@ -55,9 +80,31 @@ const navbar_items = computed(() => [
             </v-list-item>
         </v-list>
     </v-navigation-drawer>
-
-    <!-- เนื้อหาหลัก -->
-    <v-main>
-        <router-view></router-view>
-    </v-main>
 </template>
+
+<style scoped>
+.typing-container {
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.text {
+    display: inline-block;
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    text-align: center;
+    animation: blink 0.6s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+</style>

@@ -1,27 +1,27 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
+import 'animate.css';
 const { t } = useI18n();
-
 </script>
 
 <template>
     <div>
-        <section id="home-page">
-            <div class="section home">
-                <Home />
-            </div>
-        </section>
-        <section id="about-page">
+        <section id="about-page" class="animate__animated animate__fadeInDown">
             <div class="section about">
                 <About />
             </div>
         </section>
-        <section id="skill-page">
+        <section id="skill-page" class="animate__animated animate__fadeInDown">
             <div class="section skill">
                 <Skill />
             </div>
         </section>
-        <section id="contact-page">
+        <section id="project-page" class="animate__animated animate__fadeInDown">
+            <div class="section project">
+                <Project />
+            </div>
+        </section>
+        <section id="contact-page" class="animate__animated animate__fadeInDown">
             <div class="section contact">
                 <Contact />
             </div>
@@ -30,6 +30,11 @@ const { t } = useI18n();
 </template>
 
 <style scoped>
+.animate__animated.animate__fadeInDown {
+    --animate-duration: 1.5s;
+    --animate-delay: 0.9s;
+}
+
 h1,
 h2 {
     color: #333;
@@ -44,29 +49,14 @@ p {
 }
 
 .section {
-    height: 1000px;
+    height: auto;
     width: 100%;
-    padding-top: 80px;
+    padding: 50px 20px 50px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-.home {
-    background-color: #f9f9f9;
-}
-
-.about {
-    background-color: #f0f0f0;
-}
-
-.skill {
-    background-color: #e9e9e9;
-}
-
-.contact {
-    background-color: #e0e0e0;
+    overflow: hidden;
 }
 </style>

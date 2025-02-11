@@ -2,29 +2,32 @@
 import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 
+const contactInfo = [
+    { name: "Facebook", icon: "mdi-facebook", link: "https://www.facebook.com/chatupon.singkrajom.2024/", color: "blue" },
+    { name: "Line", icon: "mdi-wechat", link: "https://line.me/ti/p/kGgLG4g8PY", color: "green" },
+    { name: "Gmail", icon: "mdi-email", link: "mailto:Chatupon21396@gmail.com", color: "red" },
+    { name: "GitHub", icon: "mdi-github", link: "https://github.com/Fexx745", color: "black" }
+];
 </script>
 
 <template>
-    <v-container>
-        <v-row>
-            <v-col>
-                <h1>{{ t('welcomeMessage') }}</h1>
-                <p>{{ t('description') }}</p>
-            </v-col>
+    <v-container class="d-flex justify-center flex-column">
+        <div class="mb-4">
+            <v-chip color="#3f51b5" class="mb-2">
+                <h1>{{ t('contact.title') }}</h1>
+            </v-chip>
+
+            <p>{{ t('contact.des') }}</p>
+        </div>
+        <v-row class="justify-center align-center">
+            <div class="d-flex my-3">
+                <v-col v-for=" item in contactInfo" :key="item.name" cols="3" sm="3">
+                    <v-btn :href="item.link" target="_blank" fab :color="item.color">
+                        <v-icon>{{ item.icon }}</v-icon>&nbsp;
+                        <span class="kanit-regular">{{ item.name }}</span>
+                    </v-btn>
+                </v-col>
+            </div>
         </v-row>
     </v-container>
 </template>
-
-<style scoped>
-h1 {
-    color: #3f51b5;
-    text-align: center;
-    margin-top: 20px;
-}
-
-p {
-    color: #757575;
-    text-align: center;
-    margin-top: 10px;
-}
-</style>
