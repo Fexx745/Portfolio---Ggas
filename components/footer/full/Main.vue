@@ -12,12 +12,22 @@ const { t } = useI18n();
             <div class="footer-right">
                 <nav>
                     <ul>
-                        <li><a href="https://github.com/Gas-nontachai" target="_blank"><i class="mdi mdi-github"></i>
-                                GitHub</a></li>
-                        <li><a href="https://web.facebook.com/NontachaiProsri/" target="_blank"><i
-                                    class="mdi mdi-facebook"></i> Facebook</a>
+                        <li>
+                            <a href="https://github.com/Fexx745" target="_blank" title="GitHub">
+                                <i class="mdi mdi-github"></i> GitHub
+                            </a>
                         </li>
-                        <li><a href="mailto:bigboy2546.77@gmail.com"><i class="mdi mdi-email"></i> Email</a></li>
+                        <li>
+                            <a href="https://www.facebook.com/chatupon.singkrajom.2024/" target="_blank"
+                                title="Facebook">
+                                <i class="mdi mdi-facebook"></i> Facebook
+                            </a>
+                        </li>
+                        <li><a href="mailto:Chatupon21396@gmail.com" title="Email">
+                                <i class="mdi mdi-email"></i>
+                                Email
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>
