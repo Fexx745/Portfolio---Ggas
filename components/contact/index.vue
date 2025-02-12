@@ -5,9 +5,10 @@ const { t } = useI18n();
 
 const contactInfo = [
     { name: "Facebook", icon: "mdi-facebook", link: "https://www.facebook.com/chatupon.singkrajom.2024/", color: "blue" },
+    { name: "GitHub", icon: "mdi-github", link: "https://github.com/Fexx745", color: "black" },
     { name: "Line", icon: "mdi-wechat", link: "https://line.me/ti/p/kGgLG4g8PY", color: "green" },
     { name: "Gmail", icon: "mdi-email", link: "mailto:Chatupon21396@gmail.com", color: "red" },
-    { name: "GitHub", icon: "mdi-github", link: "https://github.com/Fexx745", color: "black" }
+    { name: "Telephone", icon: "mdi-phone", link: "tel:0954699689", color: "yellow" }
 ];
 </script>
 
@@ -21,14 +22,13 @@ const contactInfo = [
             <p>{{ t('contact.des') }}</p>
         </div>
         <v-row class="justify-center align-center">
-            <div class="d-flex my-3">
-                <v-col v-for=" item in contactInfo" :key="item.name" cols="3" sm="3">
-                    <v-btn :href="item.link" target="_blank" fab :color="item.color">
-                        <v-icon>{{ item.icon }}</v-icon>&nbsp;
-                        <span class="kanit-regular">{{ item.name }}</span>
-                    </v-btn>
-                </v-col>
-            </div>
+            <v-col v-for="item in contactInfo" :key="item.name" cols="12" sm="6" md="2"
+                class="d-flex justify-center">
+                <v-btn :href="item.link" target="_blank" fab :color="item.color">
+                    <v-icon>{{ item.icon }}</v-icon>&nbsp;
+                    <span class="kanit-regular">{{ item.name }}</span>
+                </v-btn>
+            </v-col>
         </v-row>
     </v-container>
 </template>

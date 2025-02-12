@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
-import { onMounted } from 'vue';
 const { t } = useI18n();
 import 'vue3-carousel/carousel.css';
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
@@ -10,13 +9,24 @@ import image2 from '@/assets/images/caroucel/2.png'
 import image3 from '@/assets/images/caroucel/3.png'
 
 const carouselImages = [
-    { src: image1, alt: "Image 1", description: "Description for Image 1" },
-    { src: image2, alt: "Image 2", description: "Description for Image 2" },
-    { src: image3, alt: "Image 3", description: "Description for Image 3" }
+    { src: image1, alt: "Image 1", description: "Internal Project Management System Development" },
+    { src: image2, alt: "Image 2", description: "E-commerce Website Development Project #1" },
+    { src: image3, alt: "Image 3", description: "E-commerce Website Development Project #2" }
 ];
 const carouselConfig = {
     itemsToShow: 2.5,
     wrapAround: true
+};
+const showDialog = ref(false);
+const selectedImage = ref(null);
+
+const openDialog = (image: any) => {
+    selectedImage.value = image;
+    showDialog.value = true;
+};
+
+const closeDialog = () => {
+    showDialog.value = false;
 };
 </script>
 
@@ -27,12 +37,11 @@ const carouselConfig = {
         </v-chip>
         <Carousel v-bind="carouselConfig" :autoplay="800" :interval="3000" :transition="500">
             <Slide v-for="(item, index) in carouselImages" :key="index">
-                <div class="carousel__item">
+                <div class="carousel__item" @click="openDialog(item.src)">
                     <img :src="item.src" :alt="item.alt" class="carousel-image" />
-                        <!-- <div class="box-item">
-                            <h3>Box Item {{ index + 1 }}</h3>
-                            <p>{{ item.description }}</p>
-                        </div> -->
+                    <div class="box-item">
+                        <p>{{ item.description }}</p>
+                    </div>
                 </div>
             </Slide>
             <template #addons>
@@ -70,6 +79,17 @@ const carouselConfig = {
             </v-col>
         </v-row>
     </v-container>
+
+    <v-dialog v-model="showDialog" max-width="600">
+        <v-card>
+            <v-card-title class="d-flex justify-end">
+                <v-btn icon="mdi-close" @click="closeDialog"></v-btn>
+            </v-card-title>
+            <v-card-text class="d-flex justify-center">
+                <v-img v-if="selectedImage" :src="selectedImage" class="modal-image" contain></v-img>
+            </v-card-text>
+        </v-card>
+    </v-dialog>
 </template>
 
 <style scoped>
@@ -96,21 +116,14 @@ const carouselConfig = {
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    padding: 20px;
     border-radius: 8px;
-    width: 250px;
+    width: 400px;
     cursor: pointer;
 }
 
 .box-item h3 {
     margin: 0;
     font-size: 1.2rem;
-}
-
-.box-item p {
-    margin: 10px 0 0;
-    font-size: 1rem;
-    color: #fff;
 }
 
 .detail-box {
@@ -120,7 +133,6 @@ const carouselConfig = {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #f9f9f9;
 }
 
 .detail-box p {
