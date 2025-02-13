@@ -82,9 +82,10 @@ const closeDialog = () => {
                                 </div>
                             </v-card-text>
                             <v-card-actions class="d-flex justify-start">
-                                <v-btn href="" target="_blank" variant="text" class="text-red">
-                                    <v-icon start>mdi-lock</v-icon>
-                                    ไม่สามารถเปิดเผยได้
+                                <v-btn href="https://github.com/Fexx745/Project-E-Com" target="_blank" variant="text"
+                                    class="text-primary">
+                                    <v-icon start>mdi-github</v-icon>
+                                    GitHub
                                 </v-btn>
                             </v-card-actions>
                         </v-card>
@@ -112,10 +113,9 @@ const closeDialog = () => {
                                 </div>
                             </v-card-text>
                             <v-card-actions class="d-flex justify-start">
-                                <v-btn href="https://github.com/Fexx745/Project-E-Com" target="_blank" variant="text"
-                                    class="text-primary">
-                                    <v-icon start>mdi-github</v-icon>
-                                    GitHub
+                                <v-btn href="" target="_blank" variant="text" class="text-red">
+                                    <v-icon start>mdi-lock</v-icon>
+                                    ไม่สามารถเปิดเผยได้
                                 </v-btn>
                             </v-card-actions>
                         </v-card>
