@@ -5,13 +5,21 @@ import 'vue3-carousel/carousel.css';
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 
 import image1 from '@/assets/images/caroucel/1.png'
-import image2 from '@/assets/images/caroucel/2.png'
-import image3 from '@/assets/images/caroucel/3.png'
+import image2 from '@/assets/images/caroucel/2.jpg'
+import image3 from '@/assets/images/caroucel/3.jpg'
+import image4 from '@/assets/images/caroucel/4.jpg'
+import image5 from '@/assets/images/caroucel/5.jpg'
+import image6 from '@/assets/images/caroucel/6.jpg'
+import image7 from '@/assets/images/caroucel/7.jpg'
 
 const carouselImages = [
-    { src: image1, alt: "Image 1", description: "Internal Project Management System Development" },
-    { src: image2, alt: "Image 2", description: "E-commerce Website Development Project #1" },
-    { src: image3, alt: "Image 3", description: "E-commerce Website Development Project #2" }
+    { src: image1, alt: "Image 1", description: "" },
+    { src: image2, alt: "Image 2", description: "" },
+    { src: image3, alt: "Image 3", description: "" },
+    { src: image4, alt: "Image 4", description: "" },
+    { src: image5, alt: "Image 5", description: "" },
+    { src: image6, alt: "Image 6", description: "" },
+    { src: image7, alt: "Image 7", description: "" },
 ];
 const carouselConfig = {
     itemsToShow: 2.5,
@@ -61,7 +69,7 @@ const closeDialog = () => {
                     <v-col cols="12" md="6">
                         <v-card class="pa-4 rounded-lg" elevation="3">
                             <v-card-title class="d-flex flex-column flex-sm-row align-sm-center">
-                                <span class="kanit-regular">
+                                <span class="kanit-medium ml-sm-2">
                                     {{ t('project.des.e-com.role') }}&nbsp;
                                 </span>
                                 <span class="kanit-light text-primary text-body-2 ml-sm-2">
@@ -95,7 +103,7 @@ const closeDialog = () => {
                         <v-card class="pa-4 rounded-lg" elevation="3">
                             <v-card-title class="d-flex align-center flex-wrap flex-md-nowrap">
                                 <div class="d-flex flex-column flex-sm-row align-sm-center">
-                                    <span class="kanit-regular">{{ t('project.des.mytask.role') }}</span>
+                                    <span class="kanit-medium ml-sm-2">{{ t('project.des.mytask.role') }}</span>
                                     <span class="kanit-medium text-primary text-body-2 ml-sm-2">Revel Soft</span>
                                 </div>
                             </v-card-title>
