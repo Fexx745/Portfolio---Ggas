@@ -4,15 +4,21 @@ const { t } = useI18n();
 import 'vue3-carousel/carousel.css';
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 
-import image1 from '@/assets/images/caroucel/1.png'
+import image1 from '@/assets/images/caroucel/1.jpg'
 import image2 from '@/assets/images/caroucel/2.jpg'
 import image3 from '@/assets/images/caroucel/3.jpg'
 import image4 from '@/assets/images/caroucel/4.jpg'
 import image5 from '@/assets/images/caroucel/5.jpg'
 import image6 from '@/assets/images/caroucel/6.jpg'
 import image7 from '@/assets/images/caroucel/7.jpg'
+import image8 from '@/assets/images/caroucel/8.png'
+import image9 from '@/assets/images/caroucel/9.png'
 
-const carouselImages = [
+const carouselImagesEcom = [
+    { src: image8, alt: "Image 8", description: "" },
+    { src: image9, alt: "Image 9", description: "" }
+];
+const carouselImagesCompany = [
     { src: image1, alt: "Image 1", description: "" },
     { src: image2, alt: "Image 2", description: "" },
     { src: image3, alt: "Image 3", description: "" },
@@ -46,28 +52,22 @@ const closeDialog = () => {
             </v-chip>
             <v-chip size="small" class="my-2" color="error">* สามารถกดที่รูปเพื่อขยาย</v-chip>
         </div>
-        <Carousel v-bind="carouselConfig" :autoplay="2000" :interval="3000" :transition="500">
-            <Slide v-for="(item, index) in carouselImages" :key="index">
-                <div class="carousel__item" @click="openDialog(item.src)">
-                    <img :src="item.src" :alt="item.alt" class="carousel-image" />
-                    <!-- <div class="box-item">
-                        <p>{{ item.description }}</p>
-                    </div> -->
-                </div>
-            </Slide>
-            <template #addons>
-                <Navigation />
-                <Pagination />
-            </template>
-        </Carousel>
         <v-row>
-            <!-- <v-col cols="12" md="12">
-                <h5>{{ t('project.des.title') }}</h5>
-            </v-col> -->
             <v-col cols="12" md="12" class="mt-10">
                 <v-row>
                     <v-col cols="12" md="6">
-                        <v-card class="pa-4 rounded-lg" elevation="3">
+                        <Carousel v-bind="carouselConfig" :autoplay="2000" :interval="3000" :transition="500">
+                            <Slide v-for="(item, index) in carouselImagesEcom" :key="index">
+                                <div class="carousel__item" @click="openDialog(item.src)">
+                                    <img :src="item.src" :alt="item.alt" class="carousel-image" />
+                                </div>
+                            </Slide>
+                            <template #addons>
+                                <Navigation />
+                                <Pagination />
+                            </template>
+                        </Carousel>
+                        <v-card class="pa-4 rounded-lg mt-5" elevation="3">
                             <v-card-title class="d-flex flex-column flex-sm-row align-sm-center">
                                 <span class="kanit-medium ml-sm-2">
                                     {{ t('project.des.e-com.role') }}&nbsp;
@@ -97,10 +97,20 @@ const closeDialog = () => {
                                 </v-btn>
                             </v-card-actions>
                         </v-card>
-
                     </v-col>
                     <v-col cols="12" md="6">
-                        <v-card class="pa-4 rounded-lg" elevation="3">
+                        <Carousel v-bind="carouselConfig" :autoplay="2000" :interval="3000" :transition="500">
+                            <Slide v-for="(item, index) in carouselImagesCompany" :key="index">
+                                <div class="carousel__item" @click="openDialog(item.src)">
+                                    <img :src="item.src" :alt="item.alt" class="carousel-image" />
+                                </div>
+                            </Slide>
+                            <template #addons>
+                                <Navigation />
+                                <Pagination />
+                            </template>
+                        </Carousel>
+                        <v-card class="pa-4 rounded-lg mt-5" elevation="3">
                             <v-card-title class="d-flex align-center flex-wrap flex-md-nowrap">
                                 <div class="d-flex flex-column flex-sm-row align-sm-center">
                                     <span class="kanit-medium ml-sm-2">{{ t('project.des.mytask.role') }}</span>
@@ -128,7 +138,6 @@ const closeDialog = () => {
                             </v-card-actions>
                         </v-card>
                     </v-col>
-
                 </v-row>
             </v-col>
         </v-row>
@@ -158,7 +167,7 @@ const closeDialog = () => {
 
 .carousel-image {
     width: 100%;
-    height: auto;
+    height: 220px;
     object-fit: cover;
     border-radius: 8px;
 }
