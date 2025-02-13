@@ -32,16 +32,19 @@ const closeDialog = () => {
 
 <template>
     <v-container>
-        <v-chip size="x-large" class="mb-10" color="primary">
-            <h3>{{ t('project.exampleImg') }}</h3>
-        </v-chip>
-        <Carousel v-bind="carouselConfig" :autoplay="800" :interval="3000" :transition="500">
+        <div class="d-flex flex-column w-20 align-center justify-center">
+            <v-chip size="x-large" class="my-b" color="primary">
+                <h3>{{ t('project.exampleImg') }}</h3>
+            </v-chip>
+            <v-chip size="small" class="my-2" color="error">* สามารถกดที่รูปเพื่อขยาย</v-chip>
+        </div>
+        <Carousel v-bind="carouselConfig" :autoplay="2000" :interval="3000" :transition="500">
             <Slide v-for="(item, index) in carouselImages" :key="index">
                 <div class="carousel__item" @click="openDialog(item.src)">
                     <img :src="item.src" :alt="item.alt" class="carousel-image" />
-                    <div class="box-item">
+                    <!-- <div class="box-item">
                         <p>{{ item.description }}</p>
-                    </div>
+                    </div> -->
                 </div>
             </Slide>
             <template #addons>
@@ -56,31 +59,74 @@ const closeDialog = () => {
             <v-col cols="12" md="12" class="mt-10">
                 <v-row>
                     <v-col cols="12" md="6">
-                        <strong class="kanit-regular">
-                            {{ t('project.des.e-com.role') }}&nbsp;
-                        </strong>
-                        <strong class="kanit-medium">Rajamangala University Of Technology Isan</strong>
-                        <div class="detail-box mt-3">
-                            <strong class="kanit-medium">{{ t('project.des.e-com.title') }}</strong>
-                            <p>{{ t('project.des.e-com.detail') }}</p>
-                        </div>
+                        <v-card class="pa-4 rounded-lg" elevation="3">
+                            <v-card-title class="d-flex flex-column flex-sm-row align-sm-center">
+                                <span class="kanit-regular">
+                                    {{ t('project.des.e-com.role') }}&nbsp;
+                                </span>
+                                <span class="kanit-light text-primary text-body-2 ml-sm-2">
+                                    Rajamangala University Of Technology Isan
+                                </span>
+                            </v-card-title>
+                            <v-divider></v-divider>
+                            <v-card-text style="position: relative;">
+                                <div style="position: absolute; top: 5px; left: 5px;">
+                                    <span class="text-body-5">
+                                        {{ t('project.des.e-com.title') }}
+                                    </span>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="kanit-light">
+                                        {{ t('project.des.e-com.detail') }}
+                                    </p>
+                                </div>
+                            </v-card-text>
+                            <v-card-actions class="d-flex justify-start">
+                                <v-btn href="" target="_blank" variant="text" class="text-red">
+                                    <v-icon start>mdi-lock</v-icon>
+                                    ไม่สามารถเปิดเผยได้
+                                </v-btn>
+                            </v-card-actions>
+                        </v-card>
+
                     </v-col>
                     <v-col cols="12" md="6">
-                        <strong class="kanit-regular">
-                            {{ t('project.des.mytask.role') }}&nbsp;
-                        </strong>
-                        <strong class="kanit-medium">Revel Soft</strong>
-                        <div class="detail-box mt-3">
-                            <strong class="kanit-medium">{{ t('project.des.mytask.title') }}</strong>
-                            <p>{{ t('project.des.mytask.detail') }}</p>
-                        </div>
+                        <v-card class="pa-4 rounded-lg" elevation="3">
+                            <v-card-title class="d-flex align-center flex-wrap flex-md-nowrap">
+                                <div class="d-flex flex-column flex-sm-row align-sm-center">
+                                    <span class="kanit-regular">{{ t('project.des.mytask.role') }}</span>
+                                    <span class="kanit-medium text-primary text-body-2 ml-sm-2">Revel Soft</span>
+                                </div>
+                            </v-card-title>
+                            <v-divider></v-divider>
+                            <v-card-text style="position: relative;">
+                                <div style="position: absolute; top: 5px; left: 5px;">
+                                    <span class="text-body-5">
+                                        {{ t('project.des.mytask.title') }}
+                                    </span>
+                                </div>
+                                <div class="mt-5">
+                                    <p class="kanit-light">
+                                        {{ t('project.des.mytask.detail') }}
+                                    </p>
+                                </div>
+                            </v-card-text>
+                            <v-card-actions class="d-flex justify-start">
+                                <v-btn href="https://github.com/Fexx745/Project-E-Com" target="_blank" variant="text"
+                                    class="text-primary">
+                                    <v-icon start>mdi-github</v-icon>
+                                    GitHub
+                                </v-btn>
+                            </v-card-actions>
+                        </v-card>
                     </v-col>
+
                 </v-row>
             </v-col>
         </v-row>
     </v-container>
 
-    <v-dialog v-model="showDialog" max-width="600">
+    <v-dialog v-model="showDialog" max-width="1000">
         <v-card>
             <v-card-title class="d-flex justify-end">
                 <v-btn icon="mdi-close" @click="closeDialog"></v-btn>

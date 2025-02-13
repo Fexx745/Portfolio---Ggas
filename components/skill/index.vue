@@ -95,7 +95,7 @@ const Frameworks = [
                                 <div :title="tool.name" class="d-flex align-center mb-2 flex-column hover-effect"
                                     style="padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
                                     <v-icon :size="50" :color="tool.color" class="mr-3">{{ tool.icon }}</v-icon>
-                                    <span style="width: 130px">{{ tool.name }}</span>
+                                    <span>{{ tool.name }}</span>
                                 </div>
                             </v-col>
                         </v-row>
