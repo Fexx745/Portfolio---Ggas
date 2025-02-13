@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router';
 
-const title = ref("Portforlio Chatupon");
+const title = ref("Portfolio Chatupon");
 
 useHead({
   meta: [{ content: title }],
   titleTemplate: () => {
-    return "Portforlio Chatupon";
+    return "Portfolio Chatupon";
   },
   link: [
     { rel: 'icon', href: '@/assets/images/logo/portfolio.png' }
