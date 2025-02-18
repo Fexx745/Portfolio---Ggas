@@ -119,7 +119,7 @@ const closeDialog = () => {
                                     </span>
                                 </div>
                                 <div class="mt-4">
-                                    <p class="kanit-light">
+                                    <p class="kanit-light detailPD">
                                         {{ t('project.des.e-com.detail') }}
                                     </p>
                                 </div>
@@ -169,7 +169,7 @@ const closeDialog = () => {
                                     </span>
                                 </div>
                                 <div class="mt-5">
-                                    <p class="kanit-light">
+                                    <p class="kanit-light detailPD">
                                         {{ t('project.des.mytask.detail') }}
                                     </p>
                                 </div>
@@ -243,5 +243,13 @@ const closeDialog = () => {
 
 .detail-box p {
     margin: 0;
+}
+
+.detailPD {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.6;
+    text-indent: 2em;
 }
 </style>
