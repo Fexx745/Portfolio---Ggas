@@ -20,7 +20,7 @@
     "about": {
         "text": "About Me",
         "title": "About Me",
-        "des": "Hello! 🙏 My name is Chatupol Singkrajom, a software developer with experience in Fullstack web application development using React, Vue, Nuxt3, Node.js, and MySQL. I am proficient in managing and developing both Frontend and Backend comprehensively. I am also passionate about learning new technologies to build efficient applications that meet user needs. I look forward to the opportunity to contribute my skills to an organization. 🎉"
+        "des": "Hello 🙏 My name is Chatupol Singkrajom, and I am a software developer with experience in developing Fullstack web applications using React, Vue, Nuxt3, Node.js, and MySQL. I am capable of developing both Frontend and Backend, but I specialize and have a strong expertise in Frontend development. I am also eager to learn new technologies to create efficient applications that meet user needs. I look forward to the opportunity to apply my skills to contribute to an organization. 🎉"
     },
     "skill": {
         "text": "Skills",
@@ -39,5 +39,8 @@
     },
     "footer": {
         "copyright": "© 2025 Chatupon. All rights reserved."
+    },
+    "any": {
+        "openImg": "Click on the image to enlarge"
     }
 }

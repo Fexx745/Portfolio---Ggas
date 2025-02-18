@@ -39,7 +39,8 @@ const Frameworks = [
             <v-col cols="12" md="4">
                 <v-card class="pa-4 box-item" elevation="5" rounded>
                     <v-card-title class="headline text-center">
-                        <v-chip size="x-large" color="#3f51b5" class="mb-3">
+                        <v-chip size="x-large" color="#0866ff" class="mb-3">
+                            <v-icon left>mdi-code-tags</v-icon>&nbsp;
                             <h3>{{ t('skill.programming_languages') }}</h3>
                         </v-chip>
                     </v-card-title>
@@ -60,7 +61,8 @@ const Frameworks = [
             <v-col cols="12" md="4">
                 <v-card class="pa-4 box-item" elevation="5" rounded>
                     <v-card-title class="headline text-center">
-                        <v-chip size="x-large" color="#3f51b5" class="mb-3">
+                        <v-chip size="x-large" color="#0866ff" class="mb-3">
+                            <v-icon left>mdi-code-braces</v-icon>&nbsp;
                             <h3>{{ t('skill.frameworks') }}</h3>
                         </v-chip>
                     </v-card-title>
@@ -71,7 +73,7 @@ const Frameworks = [
                                 <div :title="framework.name" class="d-flex align-center mb-2 flex-column hover-effect"
                                     style="padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
                                     <v-icon :size="60" :color="framework.color" class="mr-3">{{ framework.icon
-                                        }}</v-icon>
+                                    }}</v-icon>
                                     <span>{{ framework.name }}</span>
                                 </div>
                             </v-col>
@@ -82,10 +84,9 @@ const Frameworks = [
             <v-col cols="12" md="4">
                 <v-card class="pa-4 box-item" elevation="5" rounded>
                     <v-card-title class="headline text-center">
-                        <v-chip size="x-large" color="#3f51b5" class="mb-3">
-                            <h3>
-                                {{ t('skill.tools') }}
-                            </h3>
+                        <v-chip size="x-large" color="#0866ff" class="mb-3">
+                            <v-icon left>mdi-hammer-wrench</v-icon>&nbsp;
+                            <h3>{{ t('skill.tools') }}</h3>
                         </v-chip>
                     </v-card-title>
                     <v-divider></v-divider>

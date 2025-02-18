@@ -6,7 +6,26 @@ const { t } = useI18n();
 
 <template>
     <v-container>
-        <v-row justify="center">
+        <v-row>
+            <v-col class="d-flex justify-center align-center" cols="12" sm="6" md="6" lg="5">
+                <v-avatar size="200">
+                    <img :src="profileImage" alt="Profile Picture"
+                        style="object-fit: cover; width: 100%; height: 100%;">
+                </v-avatar>
+            </v-col>
+            <v-col cols="12" sm="6" md="6" lg="7">
+                <v-card class="elevation-0">
+                    <v-card-title>
+                        <h1>{{ t('about.title') }}</h1>
+                    </v-card-title>
+                    <v-card-text>
+                        <p class="paragraph">{{ t('about.des') }}</p>
+                    </v-card-text>
+                </v-card>
+            </v-col>
+        </v-row>
+
+        <!-- <v-row justify="center">
             <v-col cols="12" md="12" class="text-center">
                 <v-card class="pa-5" elevation="0">
                     <v-avatar size="200">
@@ -14,10 +33,10 @@ const { t } = useI18n();
                             style="object-fit: cover; width: 100%; height: 100%;">
                     </v-avatar>
                     <h1>{{ t('about.title') }}</h1>
-                    <p>{{ t('about.des') }}</p>
+                   
                 </v-card>
             </v-col>
-        </v-row>
+        </v-row> -->
     </v-container>
 </template>
 
@@ -33,5 +52,13 @@ p {
     text-align: center;
     margin-top: 10px;
     font-size: 1.2em;
+}
+
+.paragraph {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.6;
+    text-indent: 2em;
 }
 </style>
