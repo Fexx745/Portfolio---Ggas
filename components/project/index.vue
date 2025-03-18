@@ -56,6 +56,16 @@ const carouselImagesCompany = [
     { src: image6, alt: "Image 6", description: "" },
     { src: image7, alt: "Image 7", description: "" },
 ];
+
+const carouselImagesStockStore = [
+    { src: image1, alt: "Image 1", description: "" },
+    { src: image2, alt: "Image 2", description: "" },
+    { src: image3, alt: "Image 3", description: "" },
+    { src: image4, alt: "Image 4", description: "" },
+    { src: image5, alt: "Image 5", description: "" },
+    { src: image6, alt: "Image 6", description: "" },
+    { src: image7, alt: "Image 7", description: "" },
+];
 const carouselConfig = {
     itemsToShow: 2.5,
     wrapAround: true
@@ -182,6 +192,60 @@ const closeDialog = () => {
                             </v-card-actions>
                         </v-card>
                     </v-col>
+                    <!-- <v-col cols="12" md="6">
+                        <Carousel v-bind="carouselConfig" :autoplay="2000" :itemsToShow="1" :interval="3000"
+                            :transition="500">
+                            <Slide v-for="(item, index) in carouselImagesStockStore" :key="index"
+                                style="position: relative;">
+                                <div class="carousel__item" @click="openDialog(item.src)">
+                                    <img :src="item.src" :alt="item.alt" class="carousel-image" />
+                                </div>
+                                <div style="position: absolute; bottom: 20px; right: 10px;">
+                                    <strong style="color: #f44336; font-size: 14px;">*
+                                        {{ t('any.openImg') }}
+                                    </strong>
+                                </div>
+                            </Slide>
+                            <template #addons>
+                                <Navigation />
+                                <Pagination />
+                            </template>
+                        </Carousel>
+                        <v-card class="pa-4 rounded-lg mt-5" elevation="3">
+                            <v-card-title class="d-flex align-center flex-wrap flex-md-nowrap">
+                                <div class="d-flex flex-column flex-sm-row align-sm-center">
+                                    <span class="kanit-medium ml-sm-2">{{ t('project.des.mytask.role') }}</span>
+                                    <strong style="font-size: 18px;" class="text-primary ml-sm-2">
+                                        <v-icon>mdi-office-building</v-icon> Revel Soft
+                                    </strong>
+                                </div>
+                            </v-card-title>
+                            <v-divider></v-divider>
+                            <v-card-text style="position: relative;">
+                                <div style="position: absolute; top: 5px; left: 5px;">
+                                    <span class="text-body-5">
+                                        {{ t('project.des.mytask.title') }}
+                                    </span>
+                                </div>
+                                <div class="mt-5">
+                                    <p class="kanit-light detailPD">
+                                        {{ t('project.des.mytask.detail') }}
+                                    </p>
+                                </div>
+                            </v-card-text>
+                            <v-card-actions class="d-flex justify-start">
+                                <v-btn href="" target="_blank" variant="text" class="text-red">
+                                    <v-icon start>mdi-lock</v-icon>
+                                    ไม่สามารถเปิดเผยได้
+                                </v-btn>
+                            </v-card-actions>
+                        </v-card>
+                    </v-col> -->
+                    <!-- <v-col>
+                        <div class="flex justify-center align-center">
+                            <h3>โปรเจคต์ ....</h3>
+                        </div>
+                    </v-col> -->
                 </v-row>
             </v-col>
         </v-row>
@@ -206,14 +270,17 @@ const closeDialog = () => {
     align-items: center;
     text-align: center;
     cursor: pointer;
+    height: 100%;
+    width: 100%;
 }
 
 .carousel-image {
-    width: 100%;
-    height: 220px;
+    max-width: 100%;
+    max-height: 400px;
     object-fit: cover;
     border-radius: 8px;
 }
+
 
 .box-item {
     position: absolute;

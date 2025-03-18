@@ -4,7 +4,7 @@ import { ref, computed } from "vue";
 
 const { t } = useI18n();
 const drawer = ref(false);
-const fullText = "Portfolio";
+const fullText = "PORTFOLIO";
 const displayText = ref('');
 
 const navbar_items = computed(() => [
