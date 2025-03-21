@@ -95,9 +95,9 @@ const closeDialog = () => {
 </script>
 
 <template>
-    <v-container>
-        <div class="d-flex flex-column w-20 align-center justify-center">
-            <v-chip size="x-large" class="my-b" color="primary">
+    <v-container> 
+        <div class="d-flex flex-column w-20 align-center justify-center mt-5">
+            <v-chip size="x-large" color="primary">
                 <h3><v-icon style="margin-top: -5px;">mdi-briefcase-outline</v-icon>&nbsp;{{ t('project.exampleImg') }}
                 </h3>
             </v-chip>
@@ -106,7 +106,7 @@ const closeDialog = () => {
             <v-col cols="12" md="12" class="mt-10">
                 <v-row>
                     <v-col cols="12" md="6">
-                        <v-card class="pa-4 rounded-lg mt-5" elevation="3">
+                        <v-card class="pa-4 rounded-lg" elevation="3">
                             <v-card-title class="d-flex flex-column flex-sm-row align-sm-center">
                                 <span class="kanit-medium">
                                     {{ t('project.des.e-com.role') }}&nbsp;
@@ -156,7 +156,7 @@ const closeDialog = () => {
                         </v-card>
                     </v-col>
                     <v-col cols="12" md="6">
-                        <v-card class="pa-4 rounded-lg mt-5" elevation="3">
+                        <v-card class="pa-4 rounded-lg" elevation="3">
                             <v-card-title class="d-flex align-center flex-wrap flex-md-nowrap">
                                 <div class="d-flex flex-column flex-sm-row align-sm-center">
                                     <span class="kanit-medium">{{ t('project.des.mytask.role') }}</span>
@@ -205,10 +205,10 @@ const closeDialog = () => {
                         </v-card>
                     </v-col>
                     <v-col cols="12" md="6">
-                        <v-card class="pa-4 rounded-lg mt-5" elevation="3">
+                        <v-card class="pa-4 rounded-lg" elevation="3">
                             <v-card-title class="d-flex align-center flex-wrap flex-md-nowrap">
                                 <div class="d-flex flex-column flex-sm-row align-sm-center">
-                                    <span class="kanit-medium">{{ t('project.des.builtin.role') }}</span> 
+                                    <span class="kanit-medium">{{ t('project.des.builtin.role') }}</span>
                                 </div>
                             </v-card-title>
                             <v-divider></v-divider>
