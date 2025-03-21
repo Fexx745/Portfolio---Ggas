@@ -8,7 +8,7 @@ const { t } = useI18n();
     <v-container>
         <v-row>
             <v-col class="d-flex justify-center align-center" cols="12" sm="6" md="6" lg="5">
-                <v-avatar size="200">
+                <v-avatar size="240">
                     <img :src="profileImage" alt="Profile Picture"
                         style="object-fit: cover; width: 100%; height: 100%;">
                 </v-avatar>
@@ -58,7 +58,6 @@ p {
     max-width: 600px;
     margin: 0 auto;
     text-align: justify;
-    line-height: 1.6;
-    text-indent: 2em;
+    line-height: 1.6; 
 }
 </style>

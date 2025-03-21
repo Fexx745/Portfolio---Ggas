@@ -112,7 +112,7 @@ const closeDialog = () => {
                                     {{ t('project.des.e-com.role') }}&nbsp;
                                 </span>
                                 <strong style="font-size: 18px;" class="text-primary">
-                                    <v-icon>mdi-school</v-icon> Rajamangala University Of Technology Isan
+                                    <v-icon style="margin-top: -5px;">mdi-school</v-icon> Rajamangala University Of Technology Isan
                                 </strong>
                             </v-card-title>
                             <v-divider></v-divider>
@@ -161,7 +161,7 @@ const closeDialog = () => {
                                 <div class="d-flex flex-column flex-sm-row align-sm-center">
                                     <span class="kanit-medium">{{ t('project.des.mytask.role') }}</span>
                                     <strong style="font-size: 18px;" class="text-primary">
-                                        <v-icon>mdi-office-building</v-icon> Revel Soft
+                                        <v-icon style="margin-top: -5px;">mdi-office-building</v-icon> Revel Soft
                                     </strong>
                                 </div>
                             </v-card-title>
