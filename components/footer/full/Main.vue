@@ -18,12 +18,12 @@ const { t } = useI18n();
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.facebook.com/chatupon.singkrajom.2024/" target="_blank"
+                            <a href="https://www.facebook.com/jatupol.singkrajom.2024/" target="_blank"
                                 title="Facebook">
                                 <i class="mdi mdi-facebook"></i> Facebook
                             </a>
                         </li>
-                        <li><a href="mailto:Chatupon21396@gmail.com" title="Email">
+                        <li><a href="mailto:Jatupol21396@gmail.com" title="Email">
                                 <i class="mdi mdi-email"></i>
                                 Email
                             </a>

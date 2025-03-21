@@ -3,9 +3,9 @@ import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 
 const contactInfo = [
-    { name: "Facebook", icon: "mdi-facebook", link: "https://www.facebook.com/chatupon.singkrajom.2024/", color: "blue" },
+    { name: "Facebook", icon: "mdi-facebook", link: "https://www.facebook.com/jatupol.singkrajom.2024/", color: "blue" },
     { name: "Line", icon: "mdi-wechat", link: "https://line.me/ti/p/kGgLG4g8PY", color: "green" },
-    { name: "Gmail", icon: "mdi-email", link: "mailto:Chatupon21396@gmail.com", color: "red" },
+    { name: "Gmail", icon: "mdi-email", link: "mailto:Jatupol21396@gmail.com", color: "red" },
     { name: "Telephone", icon: "mdi-phone", link: "tel:0954699689", color: "warning" }
 ];
 </script>
