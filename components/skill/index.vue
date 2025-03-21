@@ -41,10 +41,9 @@ const Tools = [
             <v-col cols="12" md="4">
                 <v-card class="pa-4 box-item" elevation="5" rounded>
                     <v-card-title class="headline text-center">
-                        <v-chip size="x-large" color="primary" class="mb-3">
-                            <v-icon left>mdi-code-tags</v-icon>&nbsp;
+                        <v-chip size="x-large" color="info" class="mb-3"> 
                             <h3>{{ t('skill.programming_languages') }}</h3>
-                        </v-chip>
+                        </v-chip> 
                     </v-card-title>
                     <v-divider></v-divider>
                     <v-card-text>
@@ -64,8 +63,7 @@ const Tools = [
             <v-col cols="12" md="4">
                 <v-card class="pa-4 box-item" elevation="5" rounded>
                     <v-card-title class="headline text-center">
-                        <v-chip size="x-large" color="primary" class="mb-3">
-                            <v-icon left>mdi-code-braces</v-icon>&nbsp;
+                        <v-chip size="x-large" color="info" class="mb-3"> 
                             <h3>{{ t('skill.frameworks') }}</h3>
                         </v-chip>
                     </v-card-title>
@@ -87,8 +85,7 @@ const Tools = [
             <v-col cols="12" md="4">
                 <v-card class="pa-4 box-item" elevation="5" rounded>
                     <v-card-title class="headline text-center">
-                        <v-chip size="x-large" color="primary" class="mb-3">
-                            <v-icon left>mdi-hammer-wrench</v-icon>&nbsp;
+                        <v-chip size="x-large" color="info" class="mb-3"> 
                             <h3>{{ t('skill.tools') }}</h3>
                         </v-chip>
                     </v-card-title>

@@ -108,10 +108,10 @@ const closeDialog = () => {
                     <v-col cols="12" md="6">
                         <v-card class="pa-4 rounded-lg mt-5" elevation="3">
                             <v-card-title class="d-flex flex-column flex-sm-row align-sm-center">
-                                <span class="kanit-medium ml-sm-2">
+                                <span class="kanit-medium">
                                     {{ t('project.des.e-com.role') }}&nbsp;
                                 </span>
-                                <strong style="font-size: 18px;" class="text-primary ml-sm-2">
+                                <strong style="font-size: 18px;" class="text-primary">
                                     <v-icon>mdi-school</v-icon> Rajamangala University Of Technology Isan
                                 </strong>
                             </v-card-title>
@@ -159,8 +159,8 @@ const closeDialog = () => {
                         <v-card class="pa-4 rounded-lg mt-5" elevation="3">
                             <v-card-title class="d-flex align-center flex-wrap flex-md-nowrap">
                                 <div class="d-flex flex-column flex-sm-row align-sm-center">
-                                    <span class="kanit-medium ml-sm-2">{{ t('project.des.mytask.role') }}</span>
-                                    <strong style="font-size: 18px;" class="text-primary ml-sm-2">
+                                    <span class="kanit-medium">{{ t('project.des.mytask.role') }}</span>
+                                    <strong style="font-size: 18px;" class="text-primary">
                                         <v-icon>mdi-office-building</v-icon> Revel Soft
                                     </strong>
                                 </div>
@@ -208,10 +208,7 @@ const closeDialog = () => {
                         <v-card class="pa-4 rounded-lg mt-5" elevation="3">
                             <v-card-title class="d-flex align-center flex-wrap flex-md-nowrap">
                                 <div class="d-flex flex-column flex-sm-row align-sm-center">
-                                    <span class="kanit-medium ml-sm-2">{{ t('project.des.builtin.role') }}</span>
-                                    <!-- <strong style="font-size: 18px;" class="text-primary ml-sm-2">
-                                        <v-icon>mdi-office-building</v-icon> Revel Soft
-                                    </strong> -->
+                                    <span class="kanit-medium">{{ t('project.des.builtin.role') }}</span> 
                                 </div>
                             </v-card-title>
                             <v-divider></v-divider>
