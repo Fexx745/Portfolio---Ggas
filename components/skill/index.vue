@@ -16,10 +16,11 @@ const ProgrammingLanguages = [
 const Frameworks = [
     { name: "Bootstrap", imgUrl: "https://cdn-icons-png.flaticon.com/512/5968/5968672.png" },
     { name: "Tailwind CSS", imgUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png" },
+    { name: "Vuetify", imgUrl: "https://cdn.vuetifyjs.com/images/logos/logo.svg" },
     { name: "React", imgUrl: "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" },
     { name: "Next.js", imgUrl: "https://static-00.iconduck.com/assets.00/next-js-icon-2048x2048-5dqjgeku.png" },
     { name: "Vue.js", imgUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png" },
-    { name: "Nuxt", imgUrl: "https://nuxt.com/assets/design-kit/icon-green.svg" },
+    { name: "NuxtJS", imgUrl: "https://nuxt.com/assets/design-kit/icon-green.svg" },
     { name: "Flutter", imgUrl: "https://cdn.iconscout.com/icon/free/png-256/free-flutter-logo-icon-download-in-svg-png-gif-file-formats--programming-language-coding-development-logos-icons-1720090.png?f=webp" }
 ];
 

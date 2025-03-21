@@ -27,6 +27,15 @@ import image20 from '@/assets/images/caroucel/20.png'
 import image21 from '@/assets/images/caroucel/21.png'
 import image22 from '@/assets/images/caroucel/22.png'
 import image23 from '@/assets/images/caroucel/23.png'
+import image24 from '@/assets/images/caroucel/24.png'
+import image25 from '@/assets/images/caroucel/25.png'
+import image26 from '@/assets/images/caroucel/26.png'
+import image27 from '@/assets/images/caroucel/27.png'
+import image28 from '@/assets/images/caroucel/28.png'
+import image29 from '@/assets/images/caroucel/29.png'
+import image30 from '@/assets/images/caroucel/30.png'
+import image31 from '@/assets/images/caroucel/31.png'
+import image32 from '@/assets/images/caroucel/32.png'
 
 const carouselImagesEcom = [
     { src: image8, alt: "Image 8", description: "" },
@@ -58,13 +67,15 @@ const carouselImagesCompany = [
 ];
 
 const carouselImagesStockStore = [
-    { src: image1, alt: "Image 1", description: "" },
-    { src: image2, alt: "Image 2", description: "" },
-    { src: image3, alt: "Image 3", description: "" },
-    { src: image4, alt: "Image 4", description: "" },
-    { src: image5, alt: "Image 5", description: "" },
-    { src: image6, alt: "Image 6", description: "" },
-    { src: image7, alt: "Image 7", description: "" },
+    { src: image24, alt: "Image 1", description: "" },
+    { src: image25, alt: "Image 2", description: "" },
+    { src: image26, alt: "Image 3", description: "" },
+    { src: image27, alt: "Image 4", description: "" },
+    { src: image28, alt: "Image 5", description: "" },
+    { src: image29, alt: "Image 6", description: "" },
+    { src: image30, alt: "Image 7", description: "" },
+    { src: image31, alt: "Image 8", description: "" },
+    { src: image32, alt: "Image 9", description: "" }
 ];
 const carouselConfig = {
     itemsToShow: 2.5,
@@ -95,23 +106,6 @@ const closeDialog = () => {
             <v-col cols="12" md="12" class="mt-10">
                 <v-row>
                     <v-col cols="12" md="6">
-                        <Carousel v-bind="carouselConfig" :autoplay="2000" :itemsToShow="1" :interval="3000"
-                            :transition="500">
-                            <Slide v-for="(item, index) in carouselImagesEcom" :key="index" style="position: relative;">
-                                <div class="carousel__item" @click="openDialog(item.src)">
-                                    <img :src="item.src" :alt="item.alt" class="carousel-image" />
-                                </div>
-                                <div style="position: absolute; bottom: 20px; right: 10px;">
-                                    <strong style="color: #f44336; font-size: 14px;">*
-                                        {{ t('any.openImg') }}
-                                    </strong>
-                                </div>
-                            </Slide>
-                            <template #addons>
-                                <Navigation />
-                                <Pagination />
-                            </template>
-                        </Carousel>
                         <v-card class="pa-4 rounded-lg mt-5" elevation="3">
                             <v-card-title class="d-flex flex-column flex-sm-row align-sm-center">
                                 <span class="kanit-medium ml-sm-2">
@@ -122,12 +116,30 @@ const closeDialog = () => {
                                 </strong>
                             </v-card-title>
                             <v-divider></v-divider>
-                            <v-card-text style="position: relative;">
-                                <div style="position: absolute; top: 5px; left: 5px;">
-                                    <span class="text-body-5">
-                                        {{ t('project.des.e-com.title') }}
-                                    </span>
-                                </div>
+                            <v-card-text>
+                                <Carousel v-bind="carouselConfig" :autoplay="2000" :itemsToShow="1" :interval="3000"
+                                    :transition="500">
+                                    <Slide v-for="(item, index) in carouselImagesEcom" :key="index"
+                                        style="position: relative;">
+                                        <div class="carousel__item" @click="openDialog(item.src)">
+                                            <img :src="item.src" :alt="item.alt" class="carousel-image" />
+                                        </div>
+                                        <div style="position: absolute; bottom: 20px; right: 10px;">
+                                            <strong style="color: #f44336; font-size: 14px;">*
+                                                {{ t('any.openImg') }}
+                                            </strong>
+                                        </div>
+                                    </Slide>
+                                    <template #addons>
+                                        <Navigation />
+                                        <Pagination />
+                                    </template>
+                                </Carousel>
+                            </v-card-text>
+                            <v-card-text>
+                                <span class="text-body-5">
+                                    {{ t('project.des.e-com.title') }}
+                                </span>
                                 <div class="mt-4">
                                     <p class="kanit-light detailPD">
                                         {{ t('project.des.e-com.detail') }}
@@ -144,24 +156,6 @@ const closeDialog = () => {
                         </v-card>
                     </v-col>
                     <v-col cols="12" md="6">
-                        <Carousel v-bind="carouselConfig" :autoplay="2000" :itemsToShow="1" :interval="3000"
-                            :transition="500">
-                            <Slide v-for="(item, index) in carouselImagesCompany" :key="index"
-                                style="position: relative;">
-                                <div class="carousel__item" @click="openDialog(item.src)">
-                                    <img :src="item.src" :alt="item.alt" class="carousel-image" />
-                                </div>
-                                <div style="position: absolute; bottom: 20px; right: 10px;">
-                                    <strong style="color: #f44336; font-size: 14px;">*
-                                        {{ t('any.openImg') }}
-                                    </strong>
-                                </div>
-                            </Slide>
-                            <template #addons>
-                                <Navigation />
-                                <Pagination />
-                            </template>
-                        </Carousel>
                         <v-card class="pa-4 rounded-lg mt-5" elevation="3">
                             <v-card-title class="d-flex align-center flex-wrap flex-md-nowrap">
                                 <div class="d-flex flex-column flex-sm-row align-sm-center">
@@ -172,13 +166,31 @@ const closeDialog = () => {
                                 </div>
                             </v-card-title>
                             <v-divider></v-divider>
-                            <v-card-text style="position: relative;">
-                                <div style="position: absolute; top: 5px; left: 5px;">
-                                    <span class="text-body-5">
-                                        {{ t('project.des.mytask.title') }}
-                                    </span>
-                                </div>
-                                <div class="mt-5">
+                            <v-card-text>
+                                <Carousel v-bind="carouselConfig" :autoplay="2000" :itemsToShow="1" :interval="3000"
+                                    :transition="500">
+                                    <Slide v-for="(item, index) in carouselImagesCompany" :key="index"
+                                        style="position: relative;">
+                                        <div class="carousel__item" @click="openDialog(item.src)">
+                                            <img :src="item.src" :alt="item.alt" class="carousel-image" />
+                                        </div>
+                                        <div style="position: absolute; bottom: 20px; right: 10px;">
+                                            <strong style="color: #f44336; font-size: 14px;">*
+                                                {{ t('any.openImg') }}
+                                            </strong>
+                                        </div>
+                                    </Slide>
+                                    <template #addons>
+                                        <Navigation />
+                                        <Pagination />
+                                    </template>
+                                </Carousel>
+                            </v-card-text>
+                            <v-card-text>
+                                <span class="text-body-5">
+                                    {{ t('project.des.mytask.title') }}
+                                </span>
+                                <div class="mt-3">
                                     <p class="kanit-light detailPD">
                                         {{ t('project.des.mytask.detail') }}
                                     </p>
@@ -192,60 +204,61 @@ const closeDialog = () => {
                             </v-card-actions>
                         </v-card>
                     </v-col>
-                    <!-- <v-col cols="12" md="6">
-                        <Carousel v-bind="carouselConfig" :autoplay="2000" :itemsToShow="1" :interval="3000"
-                            :transition="500">
-                            <Slide v-for="(item, index) in carouselImagesStockStore" :key="index"
-                                style="position: relative;">
-                                <div class="carousel__item" @click="openDialog(item.src)">
-                                    <img :src="item.src" :alt="item.alt" class="carousel-image" />
-                                </div>
-                                <div style="position: absolute; bottom: 20px; right: 10px;">
-                                    <strong style="color: #f44336; font-size: 14px;">*
-                                        {{ t('any.openImg') }}
-                                    </strong>
-                                </div>
-                            </Slide>
-                            <template #addons>
-                                <Navigation />
-                                <Pagination />
-                            </template>
-                        </Carousel>
+                    <v-col cols="12" md="6">
                         <v-card class="pa-4 rounded-lg mt-5" elevation="3">
                             <v-card-title class="d-flex align-center flex-wrap flex-md-nowrap">
                                 <div class="d-flex flex-column flex-sm-row align-sm-center">
-                                    <span class="kanit-medium ml-sm-2">{{ t('project.des.mytask.role') }}</span>
-                                    <strong style="font-size: 18px;" class="text-primary ml-sm-2">
+                                    <span class="kanit-medium ml-sm-2">{{ t('project.des.builtin.role') }}</span>
+                                    <!-- <strong style="font-size: 18px;" class="text-primary ml-sm-2">
                                         <v-icon>mdi-office-building</v-icon> Revel Soft
-                                    </strong>
+                                    </strong> -->
                                 </div>
                             </v-card-title>
                             <v-divider></v-divider>
-                            <v-card-text style="position: relative;">
-                                <div style="position: absolute; top: 5px; left: 5px;">
-                                    <span class="text-body-5">
-                                        {{ t('project.des.mytask.title') }}
-                                    </span>
-                                </div>
-                                <div class="mt-5">
+                            <v-card-text>
+                                <Carousel v-bind="carouselConfig" :autoplay="2000" :itemsToShow="1" :interval="3000"
+                                    :transition="500">
+                                    <Slide v-for="(item, index) in carouselImagesStockStore" :key="index"
+                                        style="position: relative;">
+                                        <div class="carousel__item" @click="openDialog(item.src)">
+                                            <img :src="item.src" :alt="item.alt" class="carousel-image" />
+                                        </div>
+                                        <div style="position: absolute; bottom: 20px; right: 10px;">
+                                            <strong style="color: #f44336; font-size: 14px;">*
+                                                {{ t('any.openImg') }}
+                                            </strong>
+                                        </div>
+                                    </Slide>
+                                    <template #addons>
+                                        <Navigation />
+                                        <Pagination />
+                                    </template>
+                                </Carousel>
+                            </v-card-text>
+                            <v-card-text>
+                                <span class="text-body-5">
+                                    {{ t('project.des.builtin.title') }}
+                                </span>
+                                <div class="mt-3">
                                     <p class="kanit-light detailPD">
-                                        {{ t('project.des.mytask.detail') }}
+                                        {{ t('project.des.builtin.detail') }}
                                     </p>
                                 </div>
                             </v-card-text>
                             <v-card-actions class="d-flex justify-start">
-                                <v-btn href="" target="_blank" variant="text" class="text-red">
-                                    <v-icon start>mdi-lock</v-icon>
-                                    ไม่สามารถเปิดเผยได้
+                                <v-btn href="https://github.com/Gas-nontachai/8BuildIn_frontend/" target="_blank"
+                                    variant="text" class="text-primary">
+                                    <v-icon start>mdi-github</v-icon>
+                                    FrontEnd
+                                </v-btn>
+                                <v-btn href="https://github.com/Gas-nontachai/8BuildIn_backend" target="_blank"
+                                    variant="text" class="text-info">
+                                    <v-icon start>mdi-github</v-icon>
+                                    BackEnd
                                 </v-btn>
                             </v-card-actions>
                         </v-card>
-                    </v-col> -->
-                    <!-- <v-col>
-                        <div class="flex justify-center align-center">
-                            <h3>โปรเจคต์ ....</h3>
-                        </div>
-                    </v-col> -->
+                    </v-col>
                 </v-row>
             </v-col>
         </v-row>

@@ -13,6 +13,11 @@
                 "title": "Internal Project Management System Development",
                 "role": "Internship Experience at Company:",
                 "detail": "Development of an internal project management system that helps improve collaboration by creating and tracking projects, assigning tasks, defining user roles, and updating information in real-time. Used Vue.js, Nuxt 3, Vuetify for Frontend and Node.js for Backend."
+            },
+            "builtin": {
+                "title": "Skill-Building Project While Job Hunting",
+                "role": "Skill-Building Project While Job Hunting",
+                "detail": "Developed a project using Frontend technologies such as NextJS, React, and MUI for managing the UI. The Backend was built with Node.js, Express, and MySQL, incorporating authentication and various modules for project management. This project was presented to a built-in company, where it was well-received by the management. However, further progress was halted due to contract agreement issues."
             }
         },
         "exampleImg": "Project Example Image"
