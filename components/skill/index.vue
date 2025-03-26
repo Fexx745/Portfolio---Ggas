@@ -29,7 +29,8 @@ const Tools = [
     { name: "Postman", imgUrl: "https://cdn.iconscout.com/icon/free/png-256/free-postman-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-brand-vol-5-pack-logos-icons-2945092.png?f=webp&w=256" },
     { name: "GitHub Desktop", imgUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" },
     { name: "Figma", imgUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1200px-Figma-logo.svg.png" },
-    { name: "MySQL Workbench", imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBZ2GT4L-Gov2eodIbKZrVx4twV0HRVVfRjA&s" }
+    { name: "MySQL Workbench", imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBZ2GT4L-Gov2eodIbKZrVx4twV0HRVVfRjA&s" },
+    { name: "MongoDB", imgUrl: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AMongoDB_Logo.svg&psig=AOvVaw32-Duxi8Q0RQOijCEJI7Vt&ust=1743069762596000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKiOnIG_p4wDFQAAAAAdAAAAABAE" },
 ];
 
 
