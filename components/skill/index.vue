@@ -30,7 +30,7 @@ const Tools = [
     { name: "GitHub Desktop", imgUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" },
     { name: "Figma", imgUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1200px-Figma-logo.svg.png" },
     { name: "MySQL Workbench", imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBZ2GT4L-Gov2eodIbKZrVx4twV0HRVVfRjA&s" },
-    { name: "MongoDB", imgUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/2560px-MongoDB_Logo.svg.png" },
+    { name: "MongoDB", imgUrl: "https://svgmix.com/uploads/skillicons/5c80e9-mongodb.svg" },
 ];
 
 
